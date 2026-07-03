@@ -113,6 +113,7 @@ h1, h2, h3, h4, p {
   top: var(--space-10);
   left: 50%;
   transform: translateX(-50%);
+  width: max-content;
   z-index: 100;
 }
 
@@ -312,6 +313,8 @@ h1, h2, h3, h4, p {
 
 .footer {
   width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
   border-top: 1px solid var(--brand-stone);
   padding: var(--space-16) var(--space-14);
 }
