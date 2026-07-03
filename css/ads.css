@@ -1,0 +1,169 @@
+/* ============================================================
+   Case Study — Display Advertising
+   (reutiliza los patrones de photo3d.css: hero, meta, heads, steps)
+   ============================================================ */
+
+/* ---------- Campaign motif ---------- */
+
+.ads-motif {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border-top: 1px solid var(--black-200);
+  padding: var(--space-14) 0 var(--space-18);
+}
+
+.ads-motif-item {
+  position: relative;
+  width: 100%;
+}
+
+.ads-motif-item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 80px rgba(10, 13, 18, 0.12);
+}
+
+.ads-motif-item .tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: var(--brand-ink);
+  color: var(--neutral-white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.ads-motif .cap {
+  font-size: var(--font-size-body-sm);
+  line-height: 22px;
+  color: var(--brand-muted);
+  margin-top: var(--space-3);
+}
+
+/* ---------- Format suite ---------- */
+
+.ads-suite {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  border-top: 1px solid var(--black-200);
+  padding: var(--space-14) 0 var(--space-18);
+}
+
+.ads-suite .intro {
+  font-size: var(--font-size-body);
+  line-height: 26px;
+  color: var(--black-600);
+  max-width: 820px;
+}
+
+.ads-product-head h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--brand-ink);
+}
+
+.ads-product-head p {
+  font-size: var(--font-size-body-sm);
+  line-height: 22px;
+  color: var(--brand-muted);
+  margin-top: var(--space-1);
+}
+
+.ads-row {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+.ads-row.horizontal {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.ads-banner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ads-banner img {
+  border: 1px solid var(--black-200);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 6px 16px rgba(10, 13, 18, 0.08);
+  display: block;
+}
+
+.ads-banner .cap .fmt {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--brand-ink);
+}
+
+.ads-banner .cap .dim {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--brand-muted);
+}
+
+.ads-banner.h-item {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.ads-banner.h-item .cap .fmt,
+.ads-banner.h-item .cap .dim {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.ads-divider {
+  height: 1px;
+  width: 100%;
+  background: var(--black-200);
+}
+
+/* Tamaños relativos de banners (escala ~0.7 del px real) */
+.b-120x600 { width: 84px; height: 420px; object-fit: cover; }
+.b-240x400 { width: 168px; height: 280px; object-fit: cover; }
+.b-250x360 { width: 175px; height: 252px; object-fit: cover; }
+.b-250x250 { width: 175px; height: 175px; object-fit: cover; }
+.b-200x200 { width: 140px; height: 140px; object-fit: cover; }
+.b-930x180 { width: min(651px, 100%); aspect-ratio: 930 / 180; object-fit: cover; }
+.b-728x90  { width: min(510px, 100%); aspect-ratio: 728 / 90; object-fit: cover; }
+.b-468x60  { width: min(328px, 100%); aspect-ratio: 468 / 60; object-fit: cover; }
+
+@media (max-width: 640px) {
+  .ads-row {
+    gap: var(--space-4);
+  }
+
+  .b-120x600 { width: 60px; height: 300px; }
+  .b-240x400 { width: 120px; height: 200px; }
+  .b-250x360 { width: 126px; height: 181px; }
+  .b-250x250 { width: 126px; height: 126px; }
+  .b-200x200 { width: 100px; height: 100px; }
+
+  .ads-banner.h-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+}

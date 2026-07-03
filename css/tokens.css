@@ -1,0 +1,87 @@
+/* ============================================================
+   Gus Design System v1.1 — Design Tokens
+   Fuente: Figma "Gus Design System v1.0" → Tokens Reference (Updated)
+   ============================================================ */
+
+:root {
+  /* ---------- Color / Brand ---------- */
+  --brand-electric-violet: #7951e9;
+  --brand-graphite: #404040;
+  --brand-stone: #808080;
+  --brand-ink: #1a1a2e;
+  --brand-chalk: #f5f4f0;
+  --brand-muted: #888780;
+  --neutral-white: #ffffff;
+
+  /* ---------- Color / Status ---------- */
+  --status-success: #1d9e75;
+  --status-warning: #ef9f27;
+  --status-danger: #e24b4a;
+  --status-info: #7951e9;
+  --status-success-bg: #e1f5ee;
+  --status-warning-bg: #faeeda;
+  --status-danger-bg: #faece7;
+  --status-info-bg: #ede8fb;
+
+  /* ---------- Color / Black scale ---------- */
+  --black-100: #f2f2f2;
+  --black-200: #d9d9d9;
+  --black-300: #bfbfbf;
+  --black-400: #a6a6a6;
+  --black-500: #808080;
+  --black-600: #595959;
+  --black-700: #404040;
+  --black-800: #262626;
+  --black-900: #0d0d0d;
+
+  /* ---------- Typography ---------- */
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+
+  --font-size-display-2xl: 96px; /* Inter Bold */
+  --font-size-display-xl: 80px;  /* Inter Bold */
+  --font-size-display-lg: 64px;  /* Inter Bold */
+  --font-size-display-md: 56px;  /* Inter Bold */
+  --font-size-display-sm: 48px;  /* Inter Bold */
+  --font-size-h1: 32px;          /* Inter Semi Bold */
+  --font-size-h2: 24px;          /* Inter Semi Bold */
+  --font-size-h3: 20px;          /* Inter Medium */
+  --font-size-body-lg: 18px;     /* Lora Regular */
+  --font-size-body: 16px;        /* Lora Regular */
+  --font-size-body-sm: 14px;     /* Lora Regular */
+  --font-size-label: 12px;       /* Inter Medium CAPS */
+  --font-size-mono: 13px;        /* DM Mono Regular */
+
+  /* ---------- Spacing scale ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+
+  /* ---------- Border radius ---------- */
+  --radius-sharp: 2px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-xs: 0 1px 2px rgba(13, 13, 13, 0.06);
+  --shadow-sm: 0 2px 6px rgba(13, 13, 13, 0.08);
+  --shadow-md: 0 4px 12px rgba(13, 13, 13, 0.10);
+  --shadow-lg: 0 8px 24px rgba(13, 13, 13, 0.12);
+  --shadow-xl: 0 16px 40px rgba(13, 13, 13, 0.14);
+  --shadow-xxl: 0 28px 64px rgba(13, 13, 13, 0.18);
+}

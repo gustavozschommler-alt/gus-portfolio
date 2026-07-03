@@ -1,0 +1,364 @@
+/* ============================================================
+   Base — reset, tipografía y componentes compartidos
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--neutral-white);
+  color: var(--brand-graphite);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+/* ---------- Tipografía del sistema ---------- */
+
+.display-sm {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--font-size-display-sm);
+  line-height: 56px;
+  letter-spacing: -1.2px;
+}
+
+.heading-1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--font-size-h1);
+  line-height: 40px;
+  letter-spacing: -0.8px;
+}
+
+.heading-2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--font-size-h2);
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+
+.heading-3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
+.body-2xl {
+  font-size: 36px;
+  line-height: var(--space-12);
+}
+
+.body-xl {
+  font-size: 24px;
+  line-height: var(--space-8);
+}
+
+.body-lg {
+  font-size: var(--font-size-body-lg);
+  line-height: 28px;
+}
+
+.body-sm {
+  font-size: var(--font-size-body-sm);
+  line-height: 22px;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--font-size-label);
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: var(--font-size-mono);
+  line-height: 20px;
+}
+
+/* ---------- Navbar (píldora flotante) ---------- */
+
+.navbar-wrap {
+  position: fixed;
+  top: var(--space-10);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--brand-chalk) 88%, transparent);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+  box-shadow: inset 4px 4px 4.5px 0 rgba(255, 255, 255, 0.4);
+}
+
+.navbar > * {
+  flex-shrink: 0;
+}
+
+.navbar .nav-logo {
+  display: flex;
+  padding: var(--space-2);
+}
+
+.navbar .nav-logo img {
+  width: 40.5px;
+  height: 21.5px;
+  max-width: none;
+}
+
+.navbar .nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-icon {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  transition: opacity 0.2s ease;
+}
+
+.navbar .nav-icon:hover {
+  opacity: 0.6;
+}
+
+.navbar .nav-icon img {
+  width: 24px;
+  height: 24px;
+  max-width: none;
+}
+
+.navbar .nav-items {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .navbar .nav-icon {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+.navbar .nav-talk {
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--brand-electric-violet);
+  transition: transform 0.2s ease;
+}
+
+.navbar .nav-talk:hover {
+  transform: scale(1.06);
+}
+
+.navbar .nav-talk img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Botones ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--font-size-body-sm);
+  line-height: 20px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-outline {
+  background: var(--black-100);
+  border: 1.5px solid var(--brand-graphite);
+  color: var(--brand-graphite);
+}
+
+.btn-solid {
+  background: var(--brand-graphite);
+  border: 1.5px solid var(--brand-graphite);
+  color: var(--neutral-white);
+}
+
+/* Chips de categoría */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  background: var(--neutral-white);
+  border: 1.5px solid var(--black-200);
+  color: var(--brand-muted);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--font-size-body-sm);
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* ---------- Etiqueta de sección ("Featured work ↓") ---------- */
+
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 0;
+  color: var(--brand-stone);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
+.section-link .text {
+  text-decoration: underline;
+}
+
+.section-link img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Filas de icono + texto (hero / footer) ---------- */
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--brand-stone);
+}
+
+.icon-link .icon-box {
+  display: flex;
+  align-items: center;
+  padding: var(--space-2);
+  border: 1px solid var(--brand-stone);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.icon-link:hover .icon-box {
+  background: var(--black-100);
+}
+
+.icon-link .icon-box img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  width: 100%;
+  border-top: 1px solid var(--brand-stone);
+  padding: var(--space-16) var(--space-14);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.footer-logo img {
+  width: 56.3px;
+  height: 29.9px;
+}
+
+.footer-email {
+  color: var(--brand-stone);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  flex-wrap: wrap;
+}
+
+.footer-links .icon-link {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-mono);
+  line-height: 20px;
+}
+
+@media (max-width: 1100px) {
+  .footer {
+    padding: var(--space-12) var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: var(--space-10) var(--space-5);
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}

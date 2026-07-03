@@ -1,0 +1,396 @@
+/* ============================================================
+   Home
+   ============================================================ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+  padding: 180px var(--space-16) var(--space-10);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 113px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+  width: 512px;
+  max-width: 100%;
+}
+
+.hero-kicker {
+  color: var(--brand-electric-violet);
+}
+
+.hero-title {
+  color: var(--brand-graphite);
+}
+
+.hero-title .accent {
+  color: var(--brand-electric-violet);
+}
+
+.hero-lede {
+  color: var(--brand-graphite);
+}
+
+.hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  width: 324px;
+  flex-shrink: 0;
+}
+
+.hero-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.hero-portrait img {
+  width: 326px;
+  height: 489px;
+  object-fit: cover;
+}
+
+.hero-name {
+  color: var(--brand-graphite);
+  text-align: center;
+  font-weight: 500;
+}
+
+.hero-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 234px;
+}
+
+/* ---------- Featured work ---------- */
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: var(--space-4);
+  width: 100%;
+  max-width: 1312px;
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: var(--space-8) var(--space-6);
+  border-radius: var(--radius-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card.card-dark {
+  background: var(--black-900);
+  color: var(--brand-chalk);
+}
+
+.project-card.card-graphite {
+  background: var(--black-700);
+  color: var(--brand-chalk);
+}
+
+.project-card.card-light {
+  background: var(--black-100);
+  color: var(--brand-graphite);
+}
+
+.project-card .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-18);
+  width: 300px;
+  flex-shrink: 0;
+  padding: var(--space-2);
+}
+
+.project-card .card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--font-size-display-sm);
+  line-height: 56px;
+  letter-spacing: -1.2px;
+}
+
+.project-card .card-description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.project-card .card-categories {
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.project-card .card-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-12) var(--space-3);
+  min-height: 594px;
+  flex: 1;
+}
+
+.project-card .card-media img {
+  width: 100%;
+  max-width: 647px;
+  height: auto;
+}
+
+.project-card .card-media img.app-shot {
+  max-width: 440px;
+}
+
+/* ---------- Other works ---------- */
+
+.other-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-14);
+  padding: var(--space-4);
+}
+
+.other-works-title {
+  color: var(--brand-graphite);
+  text-align: center;
+}
+
+.other-works-cards {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-7);
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  width: 374px;
+  padding: var(--space-4);
+  border-radius: var(--radius-2xl);
+  transition: transform 0.25s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+}
+
+.work-card .work-image {
+  width: 100%;
+  height: 337px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.work-card .work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-card .work-title {
+  color: var(--brand-graphite);
+}
+
+.work-card .work-categories {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- About me (resumen) ---------- */
+
+.about-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-10);
+  padding: var(--space-6) var(--space-14);
+  width: 100%;
+}
+
+.about-strip .about-link {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: var(--space-4);
+  padding: 6px var(--space-3);
+}
+
+.about-strip .about-portrait {
+  width: 63px;
+  height: 73px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 16px -4px rgba(10, 13, 18, 0.08), 0 4px 6px -2px rgba(10, 13, 18, 0.03);
+}
+
+.about-strip .about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-strip .about-text {
+  color: var(--brand-graphite);
+}
+
+/* ============================================================
+   Tablet (≤1100px)
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .page {
+    gap: 140px;
+    padding: 150px var(--space-8) var(--space-8);
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-profile {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: flex-start;
+    gap: var(--space-8);
+  }
+
+  .hero-portrait {
+    width: auto;
+  }
+
+  .hero-portrait img {
+    width: 280px;
+    height: 420px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+  }
+
+  .project-card .card-text {
+    width: 100%;
+    gap: var(--space-8);
+  }
+
+  .project-card .card-media {
+    width: 100%;
+    min-height: 0;
+    padding: var(--space-8) var(--space-3);
+  }
+
+  .other-works-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-strip {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .about-strip .about-text {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+/* ============================================================
+   Mobile (≤640px)
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .page {
+    gap: 96px;
+    padding: 120px var(--space-5) var(--space-6);
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hero-lede {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .hero-profile {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .hero-portrait img {
+    width: 100%;
+    max-width: 326px;
+    height: auto;
+  }
+
+  .project-card .card-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .work-card {
+    width: 100%;
+  }
+
+  .work-card .work-image {
+    height: auto;
+    aspect-ratio: 374 / 337;
+  }
+
+  .about-strip .about-text {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}

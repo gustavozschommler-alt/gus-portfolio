@@ -1,0 +1,312 @@
+/* ============================================================
+   Case Study — Photo + 3D Manipulation
+   ============================================================ */
+
+body.photo3d-page {
+  background: var(--brand-chalk);
+}
+
+.page-p3d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 160px;
+  padding: 180px var(--space-16) var(--space-10);
+}
+
+.p3d-section {
+  width: 100%;
+  max-width: 1280px;
+}
+
+/* ---------- Hero ---------- */
+
+.p3d-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-18) 0 0;
+}
+
+.p3d-kicker {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: var(--brand-electric-violet);
+  text-transform: uppercase;
+}
+
+.p3d-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--font-size-display-lg);
+  line-height: 72px;
+  letter-spacing: -2px;
+  color: var(--brand-ink);
+  margin-top: var(--space-5);
+}
+
+.p3d-hero .lede {
+  font-size: var(--font-size-body-lg);
+  line-height: 28px;
+  color: var(--black-600);
+  max-width: 780px;
+  margin-top: var(--space-5);
+}
+
+.p3d-meta {
+  display: flex;
+  gap: var(--space-18);
+  flex-wrap: wrap;
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--black-200);
+}
+
+.p3d-meta .item .k {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: var(--brand-muted);
+}
+
+.p3d-meta .item .v {
+  font-size: var(--font-size-body);
+  line-height: 26px;
+  color: var(--brand-ink);
+  margin-top: 6px;
+}
+
+.p3d-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 100px 200px rgba(10, 13, 18, 0.18);
+}
+
+.p3d-caption {
+  font-size: var(--font-size-body-sm);
+  line-height: 22px;
+  color: var(--brand-muted);
+  text-align: center;
+  padding: var(--space-3);
+}
+
+/* ---------- Section header ---------- */
+
+.p3d-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.p3d-head h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--font-size-h2);
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: var(--brand-ink);
+}
+
+/* ---------- Overview ---------- */
+
+.p3d-overview {
+  display: flex;
+  gap: var(--space-16);
+  align-items: flex-start;
+  padding: var(--space-6) 0 var(--space-18);
+}
+
+.p3d-overview .p3d-head {
+  width: 360px;
+  flex-shrink: 0;
+  gap: var(--space-4);
+}
+
+.p3d-overview .body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  font-size: var(--font-size-body-lg);
+  line-height: 28px;
+  color: var(--black-600);
+}
+
+/* ---------- Before / After ---------- */
+
+.p3d-ba {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border-top: 1px solid var(--black-200);
+  padding: var(--space-14) 0 var(--space-16);
+}
+
+.p3d-ba-row {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+.p3d-ba-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.p3d-ba-item .img-wrap {
+  position: relative;
+  height: 427px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 75px 150px rgba(10, 13, 18, 0.14);
+}
+
+.p3d-ba-item .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p3d-ba-item .tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: var(--neutral-white);
+}
+
+.p3d-ba-item .tag.before {
+  background: var(--black-800);
+}
+
+.p3d-ba-item .tag.after {
+  background: var(--brand-electric-violet);
+}
+
+.p3d-ba-item .cap {
+  font-size: var(--font-size-body-sm);
+  line-height: 22px;
+  color: var(--brand-muted);
+  padding: var(--space-3);
+}
+
+/* ---------- Process ---------- */
+
+.p3d-process {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border-top: 1px solid var(--black-200);
+  padding: var(--space-14) 0 var(--space-18);
+}
+
+.p3d-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.p3d-step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--space-6);
+  background: var(--neutral-white);
+  border: 1px solid var(--black-200);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 3px rgba(10, 13, 18, 0.1), 0 1px 2px rgba(10, 13, 18, 0.06);
+}
+
+.p3d-step .n {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--brand-electric-violet);
+}
+
+.p3d-step h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--brand-ink);
+}
+
+.p3d-step p {
+  font-size: var(--font-size-body-sm);
+  line-height: 22px;
+  color: var(--black-600);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .page-p3d {
+    gap: 120px;
+    padding: 150px var(--space-8) var(--space-8);
+  }
+
+  .p3d-hero h1 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.2px;
+  }
+
+  .p3d-overview {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .p3d-overview .p3d-head {
+    width: 100%;
+  }
+
+  .p3d-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-p3d {
+    gap: 96px;
+    padding: 120px var(--space-5) var(--space-6);
+  }
+
+  .p3d-hero h1 {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1px;
+  }
+
+  .p3d-meta {
+    gap: var(--space-8);
+  }
+
+  .p3d-ba-row {
+    flex-direction: column;
+  }
+
+  .p3d-ba-item .img-wrap {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .p3d-steps {
+    grid-template-columns: 1fr;
+  }
+}
