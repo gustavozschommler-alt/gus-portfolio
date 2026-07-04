@@ -247,6 +247,7 @@
   gap: var(--space-10);
   padding: var(--space-6) var(--space-14);
   width: 100%;
+  max-width: 1248px;
 }
 
 .about-strip .about-link {
