@@ -795,4 +795,19 @@ body.ourspace-page {
   .os-footer .meta {
     align-items: center;
   }
+
+  /* Persona: imagen arriba + descripción abajo (flujo vertical, como Figma mobile) */
+  .os-persona-profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .os-persona-profile > .os-mini-card {
+    width: 100%;
+  }
+
+  .os-persona.tim .os-persona-profile {
+    align-items: center;
+  }
 }
